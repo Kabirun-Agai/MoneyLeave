@@ -8,10 +8,15 @@ gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 
 # 開発環境(ローカル)ではSQLite3を使用
-gem 'sqlite3', group: :development
+group :development, :test do
 
+  gem 'sqlite3'
+
+end
 # 本番環境(heroku)ではPostgreSQLを使用
-gem 'pg', group: :production
+group :production do
+  gem 'pg'
+end
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
