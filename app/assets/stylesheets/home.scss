@@ -1,0 +1,251 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/* reset ================================ */
+* {
+    box-sizing: border-box;
+  }
+  
+  html {
+    font: 100%/1.5 'Avenir Next', 'Hiragino Sans', sans-serif;
+    line-height: 1.7;
+    letter-spacing: 1px;
+  }
+  
+  ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #2d3133;
+    font-size: 14px;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+  }
+  
+  input {
+    background-color: transparent;
+    outline-width: 0;
+  }
+  
+  form input[type="submit"] {
+    border: none;
+    cursor: pointer;
+  }
+
+  div{
+    display: block;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 17px;
+  }
+  
+  /* 共通レイアウト ================================ */
+  body {
+    color: #2d3133;
+    background-color:  #ffffff;
+    margin: 0;
+    min-height: 1vh;
+  }
+  
+  .main {
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    background-color: #e0d9d988;
+  }
+  
+  .container {
+    text-align:center;
+    max-width: 600px;
+    margin: 60px auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    clear: both;
+    background-color: #ffffff;
+    border-radius: 20px;
+  }
+  
+  /* ヘッダー ================================ */
+  header {
+    height: 65px;
+    width: 100%;
+    background-color: #ff9bee;
+    position:fixed;
+    top:0px;
+    z-index:10;
+  }
+  
+  .header-logo {
+    float: left;
+    padding-left: 20px;
+    color: white;
+    font-size: 22px;
+    line-height: 64px;
+  }
+  
+  .header-logo a{
+    color: white;
+    font-size: 22px;
+  }
+  
+  .header-menus {
+    float: right;
+    padding-right: 20px;
+  }
+  
+  .header-menus li:hover{
+    opacity: 0.5; 
+  }
+
+  .header-logo:hover{
+    opacity: 0.5;
+  }
+
+  .header-menus li {
+    float: left;
+    line-height: 64px;
+    font-size: 13px;
+    color: white;
+    padding-left: 15px;
+  }
+  
+  .header-menus a {
+    float: left;
+    font-size: 13px;
+    color: white;
+  }
+  
+  .header-menus .fa {
+    padding-right: 5px;
+  }
+  
+  .header-menus input[type="submit"] {
+    padding: 0 20px;
+    float: left;
+    line-height: 64px;
+    color: white;
+    margin: 0;
+    font-size: 13px;
+  }
+
+
+  
+
+
+  /* top ================================ */
+
+  .top-main{
+    background-color: #ffffff;
+  }
+  .top-wrapper {
+    padding: 180px 0 100px 0;
+    background-image: url('topimage.jpg');
+    background-size: cover;
+    color: white;
+    text-align: center;
+  }
+
+  .btn-wrapper{
+    border-style: none;
+    margin : 0 auto;
+    width: 180px;
+    height: 31px;
+    background: linear-gradient(to bottom,#f5c5f7,#ff9bee);
+    border-radius: 10px;
+    border: 1px #ff9bee solid;
+  }
+
+  .btn-wrapper:hover{
+    cursor: pointer;
+    background: #ff9bee;
+  }
+  
+  .top-message {
+    position: relative;
+  }
+  
+  
+  
+  .description{
+    text-align:center;
+    height: 200px;
+    width: 100%;
+    padding: 0px 16px;
+    border-bottom: solid 2px #333 ; 
+  }
+
+  .description-CC:first-letter{
+      font-size: 2em;
+      color: #7172ac;
+  }
+
+  .use-CC:first-letter{
+      font-size: 2em;
+      color: #ee4a4a;
+  }
+  .use{
+    display: flex;
+    flex-flow: column;
+    text-align:center;
+
+  }
+  .use-img{
+    
+    text-align:center;
+  }
+
+  img{
+    border-radius: 30px;
+  }
+
+  .element-CC:first-letter{
+      font-size: 2em;
+      color: #afb6bf;
+  }
+
+  .element{
+    display: flex;
+    flex-flow: column;
+    text-align:center;
+    border-top: solid 2px #333 ;
+  }
+
+  .element-img{
+
+    text-align:center;
+  }
+
+ 
+
+
+
+
+  /* フラッシュ ================================ */
+  .flash {
+    padding: 10px 0;
+    color: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    text-align: center;
+    position: absolute;
+    top: 64px;
+    z-index: 10;
+    width: 100%;
+    border-radius:20px;
+    font-size: 14px;
+  }
+
+ 
+  

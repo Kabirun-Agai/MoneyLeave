@@ -1,0 +1,36 @@
+
+<%= javascript_include_tag 'money_m.js'%> 
+
+
+
+<div class = "main users-new">
+    
+    <div class="calendar-container">
+        <div class="form-heading">
+            マネー管理
+        </div>
+            <div class="priority">
+
+                <h1>今日使えるお金</h1>
+                <p class="day_canmoney"><%= @day_canmoney%>円</p>
+                <h2>今月の使えるお金</h2>
+                <p class="canmoney"><%= @canmoney%>円</p>
+
+                <!-- 以下見栄えが悪くなるのでいったんコメントアウトいいレイアウトが実行できれば追加したい内容 -->
+                <!--
+                <h3>今月の収入</h3>
+                <p><%= @allincome%>円</p>
+                <h3>今月の支出</h3>
+                <p><%= @allexpense%>円</p>
+                -->
+            </div>
+
+            <div id="calendar"></div>
+            <br/>
+            <%= link_to new_event_path do%>
+                <i class="fas fa-plus newEventicon"></i>
+           
+            <%end%>
+           
+    </div>
+</div>

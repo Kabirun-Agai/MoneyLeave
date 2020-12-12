@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require fullcalendar
+ */
+  @import 'font-awesome-sprockets';
+  @import 'font-awesome';
+
+  .fa-plus{
+      font-size: 50px;
+      color: #ff9bee;
+  }
+  .fc-day-sat {
+    .fc-daygrid-day-top, .fc-scrollgrid-sync-inner .fc-col-header-cell-cushion, .fc-list-day-cushion {
+      color: blue;
+    }
+  }
+  
+  /* フォーム================================ */
+  .form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 2px 6px #c1ced7;
+  }
+  
+  .form-heading {
+    font-weight: 300;
+    margin: 60px 0 20px;
+    font-size: 48px;
+    color: #000000;
+  }
+  
+  .form-body {
+    padding: 30px;
+  }
+  
+  .form-error {
+    color: #ff4d75;
+  }
+    
+  .form-body:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  input[type="submit"] {
+    border-style: none;
+    width: 20%;
+    height: 31px;
+    background: linear-gradient(to bottom,#f5c5f7,#ff9bee);
+    border-radius: 10px;
+    border: 1px #ff9bee solid;
+  }
+
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ff9bee;
+  }
+
+  /* エラー時のフォーム================================ */
+  div.field_with_errors {
+    background-color: transparent;
+    margin: 0 auto;
+  }

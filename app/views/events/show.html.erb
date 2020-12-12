@@ -1,0 +1,42 @@
+
+<div class = "main users-new">
+    <div class="container">
+        <div class="form-heading">予定詳細</div>
+
+        <p id="notice"><%= notice %></p>
+
+        <p>
+          <strong>タイトル:</strong>
+          <%= @event.title %>
+        </p>
+
+        <p>
+          <strong>説明:</strong>
+          <%= @event.description %>
+        </p>
+
+        <p>
+          <strong>収入:</strong>
+          <%= @event.income %>
+        </p>
+
+        <p>
+          <strong>支出:</strong>
+          <%= @event.expense %>
+        </p>
+
+        <p>
+          <strong>開始時刻:</strong>
+          <%= @event.start_date %>
+        </p>
+
+        <p>
+          <strong>終了時刻:</strong>
+          <%= @event.end_date %>
+        </p>
+
+        <%= link_to '変更', edit_event_path(@event) %> |
+        <%= link_to '削除', @event, method: :delete, data: { confirm: '本当に削除しますか？' } %> |
+        <%= link_to '戻る', '/money_m/index' %>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+<div id="calendarModal" class="modal fade" tabindex="-1">
+  <%= form_with(model: event,local: true) do |form| %>
+    <% if event.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(event.errors.count, "つの入力エラー") %>
+          <br/>
+          この項目は必須項目です
+        </h2>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.text_field :title , placeholder: "タイトル"%>
+      <% if event.errors.include?(:title) %>
+        <p style="color: red;"><%= event.errors.full_messages_for(:title).first %>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= form.text_area :description , placeholder: "詳細"%>
+    </div>
+
+    <div class="field">
+      
+      <%= form.number_field :income , placeholder: "収入" %>
+    </div>
+
+    <div class="field">
+    
+      <%= form.number_field :expense , placeholder: "支出" %>
+    </div>
+
+    <div class="field">
+      <%= form.label :開始時刻 %>
+      <%= form.datetime_field :start_date %>
+      <% if event.errors.include?(:start_date) %>
+        <p style="color: red;"><%= event.errors.full_messages_for(:start_date).first %>
+      <% end %>
+    </div>
+
+    <div class="field">
+      <%= form.label :終了時刻 %>
+      <%= form.datetime_field :end_date %>
+      <% if event.errors.include?(:end_date) %>
+        <p style="color: red;"><%= event.errors.full_messages_for(:end_date).first %>
+      <% end %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit "予定を保存"%>
+    </div>
+  <% end %>
+</div>

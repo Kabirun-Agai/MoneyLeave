@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  income: 1
+  expense: 1
+  start_date: 2020-11-22 00:43:30
+  end_date: 2020-11-22 00:43:30
+
+two:
+  title: MyString
+  description: MyText
+  income: 1
+  expense: 1
+  start_date: 2020-11-22 00:43:30
+  end_date: 2020-11-22 00:43:30
