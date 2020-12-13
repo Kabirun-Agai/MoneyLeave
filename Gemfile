@@ -7,8 +7,6 @@ ruby '2.6.6'
 gem 'rails', '~> 5.2.3'
 # Use sqlite3 as the database for Active Record
 
-# 開発環境(ローカル)ではSQLite3を使用
-
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
