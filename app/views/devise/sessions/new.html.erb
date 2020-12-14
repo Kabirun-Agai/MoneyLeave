@@ -8,11 +8,17 @@
         <div class="field">
           <%= f.label :メールアドレス %>
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <% if resource.errors.include?(:email) %>
+            <p style="color: red;"><%= resource.errors.full_messages_for(:email).first %>
+          <% end %>
         </div>
 
         <div class="field">
           <%= f.label :パスワード %>
           <%= f.password_field :password, autocomplete: "current-password" %>
+          <% if resource.errors.include?(:password) %>
+            <p style="color: red;"><%= resource.errors.full_messages_for(:password).first %>
+        <% end %>
         </div>
 
         <% if devise_mapping.rememberable? %>
