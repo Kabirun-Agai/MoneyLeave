@@ -18,9 +18,7 @@
 //= require turbolinks
 
 //= require_tree .
-$(function(){
-    setTimeout("$('.flash').fadeOut('slow')", 1000);
-});
+
 
 
 

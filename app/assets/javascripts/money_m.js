@@ -1,4 +1,7 @@
 
+$(function(){
+  setTimeout("$('.flash').fadeOut('slow')", 1000);
+});
 
 $(function () {
 
@@ -49,7 +52,7 @@ $(function () {
         selectable: true,
         selectHelper: true,
 
-        timezone: 'UTC',
+        timezone: 'local',
         editable: true,
         /*非同期通信的なの
       　　今後実行していきたい
