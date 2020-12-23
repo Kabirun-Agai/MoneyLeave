@@ -43047,3 +43047,273 @@ Processing by EventsController#index as JSON
 Completed 200 OK in 49ms (Views: 41.4ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/" for ::1 at 2020-12-18 22:28:20 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 3215ms (Views: 3205.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2020-12-18 22:28:27 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (211.2ms)
+Completed 200 OK in 329ms (Views: 316.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2020-12-18 22:28:29 +0900
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HQGnenexi+XRSdXYCzV8gZ+5MViuuyWcm4wE2R87tZPsVeSqi2MzDZLt4WchnKCerjsWQKyq0Pc60KKAa0digw==", "user"=>{"email"=>"ki1209ki1999@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "ki1209ki1999@gmail.com"], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/money_m/index
+Completed 302 Found in 271ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:28:29 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 132ms (Views: 107.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298109927" for ::1 at 2020-12-18 22:28:29 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298109927"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.4ms)
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/index.json.jbuilder (17.4ms)
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:28:33 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 108ms (Views: 99.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298113858" for ::1 at 2020-12-18 22:28:33 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298113858"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/index.json.jbuilder (12.5ms)
+Completed 200 OK in 35ms (Views: 29.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:28:42 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 127ms (Views: 119.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298122426" for ::1 at 2020-12-18 22:28:42 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298122426"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/index.json.jbuilder (11.3ms)
+Completed 200 OK in 33ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/2.html" for ::1 at 2020-12-18 22:28:43 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:77
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 108ms (Views: 98.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:28:45 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 113ms (Views: 104.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298125369" for ::1 at 2020-12-18 22:28:45 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298125369"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (0.8ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/index.json.jbuilder (12.6ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/2.html" for ::1 at 2020-12-18 22:28:48 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:77
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 105ms (Views: 98.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:28:49 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 107ms (Views: 99.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298130010" for ::1 at 2020-12-18 22:28:50 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298130010"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (0.8ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/index.json.jbuilder (11.1ms)
+Completed 200 OK in 32ms (Views: 26.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/2.html" for ::1 at 2020-12-18 22:28:51 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:77
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 110ms (Views: 102.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events/2.html" for ::1 at 2020-12-18 22:28:51 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:77
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 106ms (Views: 97.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:28:53 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 112ms (Views: 103.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298133839" for ::1 at 2020-12-18 22:28:53 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298133839"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (0.8ms)
+  Rendered events/_event.json.jbuilder (0.4ms)
+  Rendered events/_event.json.jbuilder (0.3ms)
+  Rendered events/index.json.jbuilder (14.6ms)
+Completed 200 OK in 37ms (Views: 30.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/money_m/index" for ::1 at 2020-12-18 22:29:00 +0900
+Processing by MoneyMController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" IS NULL[0m
+  ↳ app/controllers/money_m_controller.rb:19
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."year_month" = ? AND "events"."user_id" = ?[0m  [["year_month", 202012], ["user_id", 2]]
+  ↳ app/controllers/money_m_controller.rb:33
+  Rendering money_m/index.html.erb within layouts/application
+  Rendered money_m/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 108ms (Views: 100.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events.json?start=2020-11-29&end=2021-01-10&_=1608298140473" for ::1 at 2020-12-18 22:29:00 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2020-11-29", "end"=>"2021-01-10", "_"=>"1608298140473"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (0.8ms)
+  Rendered events/_event.json.jbuilder (0.4ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/index.json.jbuilder (14.5ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
